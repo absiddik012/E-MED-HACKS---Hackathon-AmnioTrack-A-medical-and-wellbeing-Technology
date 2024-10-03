@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmnioAI Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="mainPage" class="app-container">
+        <h1 class="text-center">AmnioAI Monitor</h1>
+
+        <!-- Current Fluid Level -->
+        <div class="fluid-level text-center mt-4">
+            <p>Current Amniotic Fluid Level: <span id="fluidValue">12 cm</span></p>
+        </div>
+
+        <!-- Fluid Status -->
+        <div class="status-box text-center">
+            <p>Status: <span id="statusText" class="badge bg-success">Normal</span></p>
+        </div>
+
+        <!-- Graph Container -->
+        <div class="graph-container text-center mt-4">
+            <p>Fluid Level Over Time:</p>
+            <canvas id="fluidGraph" width="300" height="150"></canvas>
+        </div>
+
+        <!-- Buttons -->
+        <div class="text-center mt-4">
+            <button id="simulateButton" class="btn btn-primary">Simulate Fluid Level Change</button>
+        </div>
+    </div>
+
+    <!-- Safe Page -->
+    <div id="safePage" class="app-container text-center" style="display: none;">
+        <h2 class="text-success">You're Safe!</h2>
+        <p>Your fluid level is normal. Keep maintaining your health!</p>
+        <button class="btn btn-primary" onclick="goToMain()">Back to Monitor</button>
+    </div>
+
+    <!-- Alert Page -->
+    <div id="alertPage" class="app-container text-center" style="display: none;">
+        <h2 class="text-danger">Alert!</h2>
+        <p>There is an issue with your fluid level. Please contact your doctor immediately.</p>
+        <button class="btn btn-danger" onclick="goToDoctor()">Contact Doctor</button>
+        <button class="btn btn-primary" onclick="goToMain()">Back to Monitor</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

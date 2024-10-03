@@ -1,0 +1,28 @@
+.app-container {
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.fluid-level {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.status-box {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.graph-container {
+    margin-bottom: 20px;
+}
+
+#alertPage, #safePage {
+    padding: 20px;
+}
+
+canvas {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
